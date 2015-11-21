@@ -1,0 +1,21 @@
+{
+  "name": "BerTlv.NET",
+  "version": "1.0.0",
+  "description": "A library for parsing BER TLV data.",
+  "homepage": "https://github.com/kspearrin/BerTlv.NET",
+  "author": "Kyle Spearrin",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kspearrin/BerTlv.NET"
+  },
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "gulp-dotnet-assembly-info": "^0.1.10",
+    "gulp-flatten": "0.0.4",
+    "gulp-msbuild": "^0.2.11",
+    "gulp-xmlpoke": "^0.2.0",
+    "gulp-xunit-runner": "^0.1.1",
+    "nuget-runner": "^0.1.5"
+  }
+}

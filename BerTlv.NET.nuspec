@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?><package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>BerTlv.NET</id>
+    <version>1.0.0</version>
+    <authors>Kyle Spearrin</authors>
+    <projectUrl>https://github.com/kspearrin/BerTlv.NET</projectUrl>
+    <licenseUrl>https://raw.githubusercontent.com/kspearrin/BerTlv.NET/master/LICENSE.txt</licenseUrl>
+    <title>BerTlv.NET</title>
+    <description>A library for parsing BER TLV data. For documentation, visit https://github.com/kspearrin/BerTlv.NET</description>
+    <tags>ber tlv emv emvtlv bertlv</tags>
+  </metadata>
+  <files>
+    <file src="BerTlv\bin\Release\BerTlv.dll" target="lib\net45"/>
+  </files>
+</package>
