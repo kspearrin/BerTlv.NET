@@ -29,7 +29,7 @@ namespace BerTlv
         /// <summary>
         /// The raw TLV data.
         /// </summary>
-        public string DataHex { get { return GetHexString(Data); } }
+        public string HexData { get { return GetHexString(Data); } }
         /// <summary>
         /// The TLV tag.
         /// </summary>

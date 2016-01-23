@@ -34,6 +34,10 @@ ICollection<Tlv> tlvs = Tlv.ParseTlv("6F1A840E315041592E5359532E4444463031A50888
 
 ## Changelog
 
+### 1.0.1
+
+Renamed `Tlv.DataHex` property to `Tlv.HexData` to be consistent with the naming convention of the rest of the `Tlv.Hex*` properties.
+
 ### 1.0.0
 
 Initial release.

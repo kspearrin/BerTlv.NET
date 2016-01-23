@@ -1,6 +1,6 @@
 {
   "name": "BerTlv.NET",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A library for parsing BER TLV data.",
   "homepage": "https://github.com/kspearrin/BerTlv.NET",
   "author": "Kyle Spearrin",
