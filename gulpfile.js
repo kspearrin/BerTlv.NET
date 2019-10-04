@@ -10,7 +10,7 @@ var p = require('./package.json')
         nugetPath: '.nuget/nuget.exe'
     });
 
-gulp.task('default', ['nuget']);
+// gulp.task('default', ['nuget']);
 
 gulp.task('assemblyInfo', [], function() {
     return gulp
