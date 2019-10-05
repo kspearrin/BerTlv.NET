@@ -5,4 +5,4 @@ cd %~dp0
 call dotnet restore
 call dotnet build --no-restore
 call dotnet test --no-build
-call dotnet pack BerTlv\BerTlv.csproj --no-build -o ./NuGet
+call dotnet pack BerTlv\BerTlv.csproj --no-build -o ../dist

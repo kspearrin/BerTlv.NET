@@ -196,3 +196,5 @@ FakesAssemblies/
 
 # xunit
 .xunit/*
+
+dist/
