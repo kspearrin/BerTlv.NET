@@ -1,20 +1,21 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29326.143
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BerTlv", "BerTlv\BerTlv.csproj", "{948B0EF3-303A-47D4-BDD8-297196F36C0F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BerTlv", "BerTlv\BerTlv.csproj", "{948B0EF3-303A-47D4-BDD8-297196F36C0F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{4A1F5DAE-C599-4649-A604-0E7F3563704A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test", "Test\Test.csproj", "{4A1F5DAE-C599-4649-A604-0E7F3563704A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{189945AF-2DE1-41E9-B497-8389457636D9}"
 	ProjectSection(SolutionItems) = preProject
 		.gitattributes = .gitattributes
 		.gitignore = .gitignore
-		BerTlv.NET.nuspec = BerTlv.NET.nuspec
-		gulpfile.js = gulpfile.js
+		appveyor.yml = appveyor.yml
+		build.cmd = build.cmd
 		LICENSE.txt = LICENSE.txt
 		README.md = README.md
+		SharedAssemblyInfo.cs = SharedAssemblyInfo.cs
 	EndProjectSection
 EndProject
 Global
@@ -34,5 +35,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {46716681-34BC-4049-9F04-782594814873}
 	EndGlobalSection
 EndGlobal
