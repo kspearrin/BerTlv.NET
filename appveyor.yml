@@ -2,7 +2,11 @@ before_build:
   - dotnet restore
 
 build_script:
-  - dotnet pack BerTlv\BerTlv.csproj -o ../dist
+  - dotnet build --no-restore
+  - dotnet pack BerTlv\BerTlv.csproj --no-build -o ../dist
+
+test_script:
+  - dotnet test --no-build
 
 deploy: off
 
