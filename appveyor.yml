@@ -1,4 +1,3 @@
 build_script:
   - build.cmd
-test: off
 deploy: off
