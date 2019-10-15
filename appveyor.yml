@@ -1,3 +1,10 @@
+before_build:
+  - dotnet restore
+
 build_script:
-  - build.cmd
+  - dotnet pack BerTlv\BerTlv.csproj -o ../dist
+
 deploy: off
+
+artifacts:
+  - path: 'dist\*.nupkg''
