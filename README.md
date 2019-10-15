@@ -34,9 +34,13 @@ ICollection<Tlv> tlvs = Tlv.ParseTlv("6F1A840E315041592E5359532E4444463031A50888
 
 ## Changelog
 
+### 2.0.1
+
+Add back `net45` support.
+
 ### 2.0.0
 
-Change project to use `netstandard1.1`
+Change project to use `netstandard1.1`.
 
 ### 1.0.1
 
