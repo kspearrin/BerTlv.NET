@@ -7,4 +7,4 @@ build_script:
 deploy: off
 
 artifacts:
-  - path: 'dist\*.nupkg''
+  - path: 'dist\*.nupkg'
