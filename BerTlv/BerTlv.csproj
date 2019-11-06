@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;netstandard1.3;net45</TargetFrameworks>
     <PackageId>BerTlv.NET</PackageId>
-    <Version>2.0.2</Version>
+    <Version>2.0.3</Version>
     <Authors>Kyle Spearrin</Authors>
     <Company />
     <Product />
