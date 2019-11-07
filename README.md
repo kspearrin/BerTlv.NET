@@ -36,7 +36,7 @@ ICollection<Tlv> tlvs = Tlv.ParseTlv("6F1A840E315041592E5359532E4444463031A50888
 
 ### 2.0.3
 
-Fixes issue with parsing of null bytes (0x00 and 0xFF) before, between, or after a valid tag
+Fixes issue with parsing of null bytes (0x00) before, between, or after a valid tag
 
 ### 2.0.2
 

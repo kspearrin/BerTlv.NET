@@ -13,7 +13,21 @@ namespace Test
 
         // Note: emvlab does not correctly parse inline and trailing padding (0x00, 0xFF), but the specification 
         // allows for it. The TLV string below should be parsed in the same way as the one above
-        private string _validAsciiHexStringWithPadding = "006F1B840E315041592E5359532E444446303100A5088801025F2D02656EFFFF";
+        private string _validAsciiHexStringWithPadding = "006F1B840E315041592E5359532E444446303100A5088801025F2D02656E0000";
+
+        [Fact]
+        [Trait("Build", "Run")]
+        public void ShouldThrowExceptionOnEmptyString()
+        {
+            Assert.Throws<ArgumentException>(() => { var tlvs = Tlv.ParseTlv(""); });
+        }
+
+        [Fact]
+        [Trait("Build", "Run")]
+        public void ShouldThrowExceptionOnEmptyHexArray()
+        {
+            Assert.Throws<ArgumentException>(() => { var tlvs = Tlv.ParseTlv(new byte[] { }); });
+        }
 
         [Fact]
         [Trait("Build", "Run")]
@@ -50,7 +64,7 @@ namespace Test
 
         [Fact]
         [Trait("Build", "Run")]
-        public void ShouldParseValidHexArrayStringWithPadding()
+        public void ShouldParseValidHexArrayWithPadding()
         {
             var validHexArrayWithPadding = Enumerable
                 .Range(0, _validAsciiHexStringWithPadding.Length)
@@ -89,5 +103,6 @@ namespace Test
             Assert.NotNull(_6FA55F2D);
             Assert.True(_6FA55F2D.HexValue == "656E");
         }
+
     }
 }

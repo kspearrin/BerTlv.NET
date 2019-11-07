@@ -26,26 +26,32 @@ namespace BerTlv
         /// The raw TLV data.
         /// </summary>
         public byte[] Data { get; private set; }
+
         /// <summary>
         /// The raw TLV data.
         /// </summary>
         public string HexData { get { return GetHexString(Data); } }
+
         /// <summary>
         /// The TLV tag.
         /// </summary>
         public int Tag { get; private set; }
+
         /// <summary>
         /// The TLV tag.
         /// </summary>
         public string HexTag { get { return Tag.ToString("X"); } }
+
         /// <summary>
         /// The length of the TLV value.
         /// </summary>
         public int Length { get; private set; }
+
         /// <summary>
         /// The length of the TLV value.
         /// </summary>
         public string HexLength { get { return Length.ToString("X"); } }
+
         /// <summary>
         /// The TLV value.
         /// </summary>
@@ -58,14 +64,36 @@ namespace BerTlv
                 return result;
             }
         }
+
         /// <summary>
         /// The TLV value.
         /// </summary>
         public string HexValue { get { return GetHexString(Value); } }
+
         /// <summary>
         /// TLV children.
         /// </summary>
         public ICollection<Tlv> Children { get; set; }
+
+        /// <summary>
+        /// Parse TLV data.
+        /// </summary>
+        /// <param name="tlv">The hex TLV blob.</param>
+        /// <returns>A collection of TLVs.</returns>
+        public static ICollection<Tlv> Parse(string tlv)
+        {
+            return ParseTlv(tlv);
+        }
+
+        /// <summary>
+        /// Parse TLV data.
+        /// </summary>
+        /// <param name="tlv">The byte array TLV blob.</param>
+        /// <returns>A collection of TLVs.</returns>
+        public static ICollection<Tlv> Parse(byte[] rawTlv)
+        {
+            return ParseTlv(rawTlv);
+        }
 
         /// <summary>
         /// Parse TLV data.
@@ -105,7 +133,7 @@ namespace BerTlv
             for(int i = 0, start = 0; i < rawTlv.Length; start = i)
             {
                 // 0x00 and 0xFF can be used as padding before, between, and after tags
-                if (rawTlv[i] == 0x00 || rawTlv[i] == 0xFF)
+                if (rawTlv[i] == 0x00)
                 {
                     i++;
                     continue;
@@ -141,8 +169,10 @@ namespace BerTlv
                 result.Add(tlv);
 
                 // if this was a constructed tag, parse its value into individual Tlv children as well
-                if(constructedTlv)
+                if (constructedTlv)
+                {
                     ParseTlv(tlv.Value, tlv.Children);
+                }
             }
         }
 
