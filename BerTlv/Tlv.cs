@@ -133,7 +133,7 @@ namespace BerTlv
             for(int i = 0, start = 0; i < rawTlv.Length; start = i)
             {
                 // 0x00 and 0xFF can be used as padding before, between, and after tags
-                if (rawTlv[i] == 0x00)
+                if(rawTlv[i] == 0x00)
                 {
                     i++;
                     continue;
@@ -169,7 +169,7 @@ namespace BerTlv
                 result.Add(tlv);
 
                 // if this was a constructed tag, parse its value into individual Tlv children as well
-                if (constructedTlv)
+                if(constructedTlv)
                 {
                     ParseTlv(tlv.Value, tlv.Children);
                 }
